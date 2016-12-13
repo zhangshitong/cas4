@@ -10,7 +10,7 @@
             <%--<%=org.jasig.cas.CasVersion.getDateTime()%></p>--%>
 
       <p>Powered by CAS <%=org.jasig.cas.CasVersion.getVersion()%></a>
-          <%=org.jasig.cas.CasVersion.getDateTime()%></p>
+          <%--<%=org.jasig.cas.CasVersion.getDateTime()%></p>--%>
 
   </div>
 </footer>
