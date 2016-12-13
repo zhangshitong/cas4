@@ -1,0 +1,14 @@
+---
+applications:
+- name: cas4-server
+  memory: 1024M
+path: target/cas4-server.war
+buildpack: java_buildpack_offline
+instances: 1
+host: auth
+domain: apps.iisipcf.io
+env:
+    CF_TARGET: https://api.system.iisipcf.io
+    JAVA_OPTS: -Dserver.name=https://auth.apps.iisipcf.io
+#    -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=16000
+

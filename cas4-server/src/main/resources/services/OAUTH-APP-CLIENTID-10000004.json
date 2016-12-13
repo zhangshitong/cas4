@@ -1,0 +1,22 @@
+{
+  "@class" : "org.jasig.cas.support.oauth.services.OAuthRegisteredService",
+  "clientId": "client_cas_app_sample_oauth",
+  "clientSecret": "Secret_Key_cas",
+  "description" : "This service support Oauth2.0 that support HTTPS and IMAPS protocols.",
+  "bypassApprovalPrompt": false,
+  "serviceId" : "^(https|http)://cas-app-oauth.*",
+  "name" : "HTTPS and HTTP",
+  "id" : 10000004,
+  "evaluationOrder" : 1000,
+  "usernameAttributeProvider" : {
+    "@class" : "org.jasig.cas.services.DefaultRegisteredServiceUsernameProvider"
+  },
+  "attributeReleasePolicy" : {
+    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy",
+    "principalAttributesRepository" : {
+      "@class" : "org.jasig.cas.authentication.principal.DefaultPrincipalAttributesRepository"
+    },
+    "authorizedToReleaseCredentialPassword" : false,
+    "authorizedToReleaseProxyGrantingTicket" : false
+  }
+}
